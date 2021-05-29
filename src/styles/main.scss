@@ -1,0 +1,51 @@
+@import "./fonts";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+html,
+body,
+#app {
+	height: 100%;
+	font-family: 'Rubik-Light';
+	color: white;
+}
+
+strong,
+b {
+	font-family: 'Rubik-Regular';
+}
+
+#app {
+  background-image: url(../assets/img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+}
+
+.link {
+	color: #5b40ff;
+	text-decoration: none;
+}

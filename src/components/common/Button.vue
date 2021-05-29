@@ -1,0 +1,82 @@
+<template>
+  <button
+    class="button"
+    :class="optionClass"
+    :type="type"
+    @click="$emit('click')"
+  >
+    <div
+      class="button__left"
+      v-if="hasLeftIconSlot"
+    >
+      <slot
+        name="leftIcon"
+      />
+    </div>
+
+    <slot name="text">
+      Текст
+    </slot>
+
+    <div
+      class="button__right"
+      v-if="hasRightIconSlot"
+    >
+      <slot
+        name="rightIcon"
+      />
+    </div>
+  </button>
+</template>
+
+<script>
+export default {
+  props: {
+    optionClass: {
+      type: String,
+      default: ''
+    },
+    type: {
+      type: String,
+      default: 'button'
+    }
+  },
+
+  computed: {
+    hasLeftIconSlot() {
+      return !!this.$slots.leftIcon
+    },
+
+    hasRightIconSlot() {
+      return !!this.$slots.rightIcon
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+  .button {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .button__left {
+    margin-right: 10px;
+  }
+
+  .button__right {
+    margin-left: 10px;
+  }
+
+  .standart {
+    padding: 11px 50px;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: .5s all;
+
+    &:hover {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+</style>
