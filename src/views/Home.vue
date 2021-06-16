@@ -5,7 +5,7 @@
     </div>
 
     <div class="home__community">
-      <CommunityBlock />
+      <CommunityBlock :users="users" />
     </div>
   </div>
 </template>
@@ -13,9 +13,23 @@
 <script>
 import InfoBlock from '@/components/interface/InfoBlock.vue'
 import CommunityBlock from '@/components/interface/CommunityBlock.vue'
+import Users from '@/mock/users.js'
 
 export default {
   name: 'Home',
+
+  metaInfo() {
+    return {
+      title: `Hyperion - ${this.$route.meta.title}`
+    };
+  },
+
+  data() {
+    return {
+      users: Users
+    }
+  },
+
   components: {
     InfoBlock,
     CommunityBlock,

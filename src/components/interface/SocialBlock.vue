@@ -33,7 +33,8 @@
 import btn from '@/components/common/Button.vue'
 
 export default {
-  name: 'Header',
+  name: 'SocialBlock',
+
   components: {
     btn
   }

@@ -78,7 +78,8 @@ import btn from '@/components/common/Button.vue'
 import SocialBlock from '@/components/interface/SocialBlock.vue'
 
 export default {
-  name: 'Header',
+  name: 'InfoBlock',
+
   components: {
     btn,
     SocialBlock

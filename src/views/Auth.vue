@@ -6,7 +6,13 @@
 
 <script>
 export default {
-  name: 'Auth'
+  name: 'Auth',
+
+  metaInfo() {
+    return {
+      title: `Hyperion - ${this.$route.meta.title}`
+    };
+  },
 }
 </script>
 

@@ -68,6 +68,7 @@ import btn from '@/components/common/Button.vue'
 
 export default {
   name: 'Header',
+
   components: {
     btn
   }

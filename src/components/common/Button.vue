@@ -31,11 +31,14 @@
 
 <script>
 export default {
+  name: 'Button',
+
   props: {
     optionClass: {
       type: String,
       default: ''
     },
+
     type: {
       type: String,
       default: 'button'
@@ -77,6 +80,31 @@ export default {
 
     &:hover {
       border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .card {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+    transition: .5s all;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .moreinfo {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .1);
+    width: 100%;
+    transition: .5s all;
+    color: white;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, .2);
     }
   }
 </style>
